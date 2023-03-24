@@ -1,0 +1,38 @@
+{
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "contracts": {
+    "NonFungibleToken": {
+      "source": "./contracts/NonFungibleToken.cdc"
+    },
+    "MetadataViews": "./contracts/MetadataViews.cdc",
+    "ViewResolver": "./contracts/ViewResolver.cdc",
+    "ExampleNFT": "./contracts/ExampleNFT.cdc",
+    "FungibleToken": "./contracts/utilities/FungibleToken.cdc",
+    "NFTForwarding": "./contracts/utilities/NFTForwarding.cdc"
+  },
+  "accounts": {
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "key": "80aa8e538f80a68157ee0ef2d0b48740de8b26d9866626464a6ca4ba214228b0"
+    },
+    "khaled": {
+      "fromFile": "khaled.private.json"
+    }
+  },
+  "deployments": {
+    "testnet": {
+      "khaled": [
+        "NonFungibleToken",
+        "ViewResolver",
+        "ExampleNFT",
+        "MetadataViews",
+        "FungibleToken",
+        "NFTForwarding"
+      ]
+    }
+  }
+}
