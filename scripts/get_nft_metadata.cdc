@@ -146,3 +146,4 @@ pub fun main(address: Address, id: UInt64): NFT {
 				license:license
     )
 }
+ 
