@@ -1,38 +1,54 @@
 {
-  "networks": {
-    "emulator": "127.0.0.1:3569",
-    "mainnet": "access.mainnet.nodes.onflow.org:9000",
-    "testnet": "access.devnet.nodes.onflow.org:9000"
-  },
-  "contracts": {
-    "NonFungibleToken": {
-      "source": "./contracts/NonFungibleToken.cdc"
-    },
-    "MetadataViews": "./contracts/MetadataViews.cdc",
-    "ViewResolver": "./contracts/ViewResolver.cdc",
-    "ExampleNFT": "./contracts/ExampleNFT.cdc",
-    "FungibleToken": "./contracts/utilities/FungibleToken.cdc",
-    "NFTForwarding": "./contracts/utilities/NFTForwarding.cdc"
-  },
-  "accounts": {
-    "emulator-account": {
-      "address": "f8d6e0586b0a20c7",
-      "key": "80aa8e538f80a68157ee0ef2d0b48740de8b26d9866626464a6ca4ba214228b0"
-    },
-    "khaled": {
-      "fromFile": "khaled.private.json"
-    }
-  },
-  "deployments": {
-    "testnet": {
-      "khaled": [
-        "NonFungibleToken",
-        "ViewResolver",
-        "ExampleNFT",
-        "MetadataViews",
-        "FungibleToken",
-        "NFTForwarding"
-      ]
-    }
-  }
+	"contracts": {
+		"ExampleNFT": "./contracts/ExampleNFT.cdc",
+		"FungibleToken": {
+			"source": "./contracts/utilities/FungibleToken.cdc",
+			"aliases": {
+				"emulator": "ee82856bf20e2aa6",
+				"testnet": "9a0766d93b6608b7"
+			}
+		},
+		"MetadataViews": {
+			"source": "./contracts/MetadataViews.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7",
+				"testnet": "631e88ae7f1d7c20"
+			}
+		},
+		"NonFungibleToken": {
+			"source": "./contracts/NonFungibleToken.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7",
+				"testnet": "631e88ae7f1d7c20"
+			}
+		}
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "80aa8e538f80a68157ee0ef2d0b48740de8b26d9866626464a6ca4ba214228b0"
+		},
+		
+		"khaled1": {
+			"address": "a9ccb9756a0ee7eb",
+			"key": {
+				"type": "file",
+				"location": "khaled1.pkey"
+			}
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"khaled1": [
+				"NonFungibleToken",
+				"ExampleNFT",
+				"MetadataViews"
+			]
+		}
+	}
 }

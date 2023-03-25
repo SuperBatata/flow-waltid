@@ -1,0 +1,16 @@
+{
+  "name": "flow-waltid",
+  "version": "1.0.0",
+  "description": "To run tests, run the following command :",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@onflow/fcl": "^1.3.2",
+    "dotenv": "^16.0.3"
+  }
+}
