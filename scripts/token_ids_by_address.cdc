@@ -3,28 +3,6 @@ import MetadataViews from "../contracts/MetadataViews.cdc"
 
 /// This script gets all the view-based metadata associated with the specified NFT
 /// and returns it as a single struct
-pub struct NFTS {
-    pub let name: String
-    pub let description: String
-    pub let thumbnail: String
-    pub let owner: Address
-   
-
-    init(
-        name: String,
-        description: String,
-        thumbnail: String,
-        owner: Address,
-      
-    ) {
-        self.name = name
-        self.description = description
-        self.thumbnail = thumbnail
-        self.owner = owner
-      
-   
-    }
-}
 
 pub fun main(address: Address): [{String: AnyStruct}] {
     let account = getAccount(address)
@@ -51,15 +29,6 @@ pub fun main(address: Address): [{String: AnyStruct}] {
     }
   
     
-	
-
-    // return NFTS(
-    //     name: display.name,
-    //     description: display.description,
-    //     thumbnail: display.thumbnail.uri(),
-    //     owner: owner,
-        
-    // )
 
     return nfts
 }
