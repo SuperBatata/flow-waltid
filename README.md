@@ -34,3 +34,16 @@ flow scripts execute ./scripts/token_ids_by_address.cdc 0x2f28339dbc046497  --ne
 
     ```
 ````
+
+
+Transfer NFT :
+
+```bash
+flow transactions send transactions/InitCollection.cdc 0xe8e83eb775b67bc2 1 --signer khaled1 --network testnet
+```
+
+Setup collection :
+
+```bash
+flow transactions send transactions/InitCollection.cdc 0xe8e83eb775b67bc2 1 --signer khaled1 --network testnet
+```

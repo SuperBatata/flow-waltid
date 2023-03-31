@@ -45,4 +45,4 @@ const getNFTs = async () => {
   console.log(response);
 };
 
-getNFTs();
+export default getNFTs();

@@ -161,7 +161,7 @@ pub fun main(address: Address, id: UInt64): NFT {
   `,
     args: (arg, t) => [
       arg(process.env.accountAddress, t.Address),
-      arg(0, t.UInt64),
+      arg(1, t.UInt64),
     ],
   });
   console.log(response);

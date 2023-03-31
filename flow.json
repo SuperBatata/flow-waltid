@@ -1,54 +1,60 @@
 {
-	"contracts": {
-		"ExampleNFT": "./contracts/ExampleNFT.cdc",
-		"FungibleToken": {
-			"source": "./contracts/utilities/FungibleToken.cdc",
-			"aliases": {
-				"emulator": "ee82856bf20e2aa6",
-				"testnet": "9a0766d93b6608b7"
-			}
-		},
-		"MetadataViews": {
-			"source": "./contracts/MetadataViews.cdc",
-			"aliases": {
-				"emulator": "f8d6e0586b0a20c7",
-				"testnet": "631e88ae7f1d7c20"
-			}
-		},
-		"NonFungibleToken": {
-			"source": "./contracts/NonFungibleToken.cdc",
-			"aliases": {
-				"emulator": "f8d6e0586b0a20c7",
-				"testnet": "631e88ae7f1d7c20"
-			}
-		}
-	},
-	"networks": {
-		"emulator": "127.0.0.1:3569",
-		"mainnet": "access.mainnet.nodes.onflow.org:9000",
-		"testnet": "access.devnet.nodes.onflow.org:9000"
-	},
-	"accounts": {
-		"emulator-account": {
-			"address": "f8d6e0586b0a20c7",
-			"key": "80aa8e538f80a68157ee0ef2d0b48740de8b26d9866626464a6ca4ba214228b0"
-		},
-		
-		"khaled1": {
-			"address": "a9ccb9756a0ee7eb",
-			"key": {
-				"type": "file",
-				"location": "khaled1.pkey"
-			}
-		}
-	},
-	"deployments": {
-		"testnet": {
-			"khaled1": [
-				"NonFungibleToken",
-				"ExampleNFT",
-				"MetadataViews"
-			]
-		}
-	}
+  "contracts": {
+    "ExampleNFT": "./contracts/ExampleNFT.cdc",
+    "FungibleToken": {
+      "source": "./contracts/utilities/FungibleToken.cdc",
+      "aliases": {
+        "emulator": "ee82856bf20e2aa6",
+        "testnet": "9a0766d93b6608b7"
+      }
+    },
+    "MetadataViews": {
+      "source": "./contracts/MetadataViews.cdc",
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "testnet": "631e88ae7f1d7c20"
+      }
+    },
+    "NonFungibleToken": {
+      "source": "./contracts/NonFungibleToken.cdc",
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "testnet": "631e88ae7f1d7c20"
+      }
+    }
+  },
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "key": "80aa8e538f80a68157ee0ef2d0b48740de8b26d9866626464a6ca4ba214228b0"
+    },
+    "khaled": {
+      "address": "2f28339dbc046497",
+      "key": "42225a5f4f81126addbffa8eed8ca9961262809511b0758b485bc89cf605d8de"
+    },
+    "khaled1": {
+      "address": "a9ccb9756a0ee7eb",
+      "key": {
+        "type": "file",
+        "location": "khaled1.pkey"
+      }
+    },
+    "khaled2": {
+      "address": "e8e83eb775b67bc2",
+      "key": {
+        "type": "file",
+        "location": "khaled2.pkey"
+      }
+    }
+  },
+  "deployments": {
+    "testnet": {
+      "khaled1": ["NonFungibleToken", "ExampleNFT", "MetadataViews"]
+    }
+  }
 }
